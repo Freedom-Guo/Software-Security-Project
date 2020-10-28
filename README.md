@@ -1,16 +1,25 @@
-# Software-Security
-华中科技大学计算机学院软件安全课程设计代码
+# Software-Security-Project
+Design code of software security course, School of Computer science, Huazhong University of Science and Technology
 
 ## A_1
-该程序为利用字符串比对同源性检测程序
 
-程序进行检测的文件在同源性样本库中
+**File Name: string.cpp**
 
-程序的输入为：
+- Function: Homology detection using string matching
 
-文件1: 进行检测的源文件1\n 源文件1预处理后写入的文件\n
+- Principle: Analyze the copy ratio between samples by comparing and matching valid code strings
 
-文件2: 与文件1进行同源性检测的源文件2\n 源文件2预处理后写入的文件\n
+- Data: In "同源性检测样本库.zip"
+
+- Input:
+
+	In\_name_1: Source file1 to test  
+	
+	Out\_name_1: Source file1 after preprocessing
+
+	In\_name_2: Source file2 for homology detection with file1
+	
+	Out\_name_2: Source file2 after preprocessing
 
 ## A_2
 该程序为基于CFG图进行同源性检测程序
@@ -31,6 +40,8 @@
 程序会将所有文件的CFG图输出，并输出相似度
 
 ## A_4
+
+Function: 
 该程序为使用漏洞样本库实现栈溢出漏洞检测的测试程序
 
 程序的输入为：
@@ -40,22 +51,42 @@
 程序会将溢出可能的地方输出
 
 
-## B_1
-该程序为栈溢出漏洞检测程序
+## Stack buffer detection
 
-程序进行检测的文件在漏洞检测样本库中
+**File Name: stack overflow.cpp**
 
-## B_2
-该程序为整数宽度溢出漏洞检测程序
+- Function: Stack buffer overflow detection
 
-程序进行检测的文件在漏洞检测样本库中
+- Principle: According to the principle of stack buffer, the overflow problem of allocated stack data area is analyzed, and the number of suspicious lines and columns is given.
 
-## B_3
-该程序为整数运算溢出漏洞检测程序
+- Data: In "漏洞检测样本库.zip"
 
-程序进行检测的文件在漏洞检测样本库中
+## Heap buffer detection
 
-## B_4
-该程序为堆溢出漏洞检测程序
+**File Name: heap overflow.cpp**
 
-程序进行检测的文件在漏洞检测样本库中
+- Function: Heap buffer overflow detection
+
+- Principle: According to the principle of heap buffer, the overflow problem of allocated heap data area is analyzed, and the number of suspicious lines and columns is given.
+
+- Data: In "漏洞检测样本库.zip"
+
+## Integer width overflow detection
+
+**File Name: Integer width overflow.cpp**
+
+- Function: Integer width overflow detection
+
+- According to the principle of integer width overflow, the overflow problem of allocated data is analyzed, and the number of suspicious lines and columns is given.
+
+- Data: In "漏洞检测样本库.zip"
+
+## Integer arithmetic overflow detection
+
+**File Name: integer arithmetic overflow.cpp**
+
+- Function: Integer arithmetic overflow detection
+
+- Principle: According to the overflow principle of integer operation, the overflow problem of allocated data is analyzed, and the number of suspicious lines and columns is given.
+
+- Data: In "漏洞检测样本库.zip"
