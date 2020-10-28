@@ -1,7 +1,7 @@
 # Software-Security-Project
 Design code of software security course, School of Computer science, Huazhong University of Science and Technology
 
-## A_1
+## String Matching
 
 **File Name: string.cpp**
 
@@ -21,35 +21,23 @@ Design code of software security course, School of Computer science, Huazhong Un
 	
 	Out\_name_2: Source file2 after preprocessing
 
-## A_2
-该程序为基于CFG图进行同源性检测程序
+## CFG 
 
-程序的输入为：
+**File Name: CFG.cpp**
 
-文件1: 进行检测的源文件1\n 源文件1预处理后写入的文件\n
+- Function: The control flow chart CFG was used to detect source code homology
 
-文件2: 与文件1进行同源性检测的源文件2\n 源文件2预处理后写入的文件\n
+- Principle: By extracting the call diagram of the code, the similarity of each function call diagram among the samples is detected and the probability of similarity is obtained.
 
-## A_3
-该程序为使用同源性代码库实现基于CFG图进行同源性检测的测试程序
+- Input:
 
-程序的输入为：
+	In\_name_1: Source file1 to test  
+	
+	Out\_name_1: Source file1 after preprocessing
 
-文件1: 进行检测的源文件1\n 源文件1预处理后写入的文件\n
-
-程序会将所有文件的CFG图输出，并输出相似度
-
-## A_4
-
-Function: 
-该程序为使用漏洞样本库实现栈溢出漏洞检测的测试程序
-
-程序的输入为：
-
-文件1: 进行检测的源文件1\n 源文件1预处理后写入的文件\n
-
-程序会将溢出可能的地方输出
-
+	In\_name_2: Source file2 for homology detection with file1
+	
+	Out\_name_2: Source file2 after preprocessing
 
 ## Stack buffer detection
 
@@ -90,3 +78,31 @@ Function:
 - Principle: According to the overflow principle of integer operation, the overflow problem of allocated data is analyzed, and the number of suspicious lines and columns is given.
 
 - Data: In "漏洞检测样本库.zip"
+
+## CFG Test
+
+- Function: A test procedure for homology detection based on CFG graph
+
+- Input: 
+
+	In\_name_1: Source file1 to test  
+	
+	Out\_name_1: Source file1 after preprocessing
+
+- Output:
+
+	CFG figure
+	
+	the similarity
+
+## Leak Detection
+
+- Function: The test program of stack overflow vulnerability detection is realized by using vulnerability sample library
+
+- Input: 
+
+	In\_name_1: Source file1 to test  
+	
+	Out\_name_1: Source file1 after preprocessing
+
+- Output: Where the program is likely to overflow
